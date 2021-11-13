@@ -62,4 +62,24 @@ levels(iris[,5])
 unique(iris$Species)
 train <- iris[1:70, c(2,4,5)]
 train[train$Sepal.Width > 1.5 & train$Petal.Width < 4.2, ]
-weight <- c()
+weight <- c(seq(45, 110, 15))
+height <- c(seq(150, 190, 10))
+sex <- sample(c(rep('F', 3), rep('M', 2)))
+df <- data.frame(weight, height, sex, stringsAsFactors = T)
+df
+ind <- order(df$height)
+df <- df[ind,]
+df
+m <- 1:30
+m
+shape <- c(3,10)
+dim(m) <- shape
+m
+class(m)
+length(popul)
+mt <- matrix(popul, 10, 5)
+vec <- dim(mt)
+rownames(mt) <- chars[order(chars, decreasing = T)][1:10]
+colnames(mt) <- paste0(format(ISOdate(2021, 11, 1:5), '%d'), sep='_', rep('nov', 5))
+mt
+rnorm(mt, 0, 1)
